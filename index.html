@@ -1,198 +1,515 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sriya Maroju | Analytics Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102747">
+  <meta name="description" content="Sriya Maroju's business analytics portfolio featuring data analytics projects, technical skills, and professional experience.">
+  <title>Sriya Maroju | Business Analytics Portfolio</title>
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f7fb;
-  color: #263447;
-  line-height: 1.7;
-}
-header {
-  background: #17365d;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
-}
-  header img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid white;
-  margin-bottom: 12px;
-}
-header h1 {
-  font-size: 36px;
-  margin-bottom: 8px;
-}
-header p {
-  margin: 5px;
-}
-main {
-  max-width: 850px;
-  margin: 30px auto;
-  padding: 0 18px;
-}
-section {
-  background: white;
-  margin-bottom: 22px;
-  padding: 24px;
-  border-radius: 12px;
-}
-h2 {
-  color: #17365d;
-}
-.project {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 16px 0;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+  <style>
+    :root {
+      --navy: #102747;
+      --blue: #2457a7;
+      --light-blue: #eaf1fc;
+      --background: #f5f7fb;
+      --white: #ffffff;
+      --text: #27364b;
+      --muted: #617086;
+      --border: #e0e7f0;
+    }
 
-.project:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(23, 54, 101, 0.12);
-}
-a {
-  color: #1769aa;
-}
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 20px;
-}
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-.hero-buttons a {
-  display: inline-block;
-  background: white;
-  color: #173665;
-  padding: 10px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-.hero-buttons a:hover {
-  background: #e8eef7;
-}
-  footer {
-  text-align: center;
-  padding: 25px;
-  color: #555;
-}
-</style>
+    a {
+      color: var(--blue);
+    }
+
+    .navbar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-size: 19px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #102747, #214c83);
+      color: white;
+      padding: 64px 20px 70px;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 132px;
+      height: 132px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #cbdcf7;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 46px);
+      line-height: 1.2;
+      margin: 8px 0 12px;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #e4ebf7;
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 19px;
+      border: 1px solid white;
+      border-radius: 8px;
+      background: white;
+      color: var(--navy);
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--light-blue);
+    }
+
+    .button-outline {
+      background: transparent;
+      color: white;
+    }
+
+    .button-outline:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: 34px auto;
+      padding: 0 22px;
+    }
+
+    section {
+      scroll-margin-top: 24px;
+      margin-bottom: 25px;
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(16, 39, 71, 0.035);
+    }
+
+    .section-heading {
+      color: var(--navy);
+      font-size: 25px;
+      margin: 0 0 8px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin: 0 0 22px;
+    }
+
+    .about-text {
+      max-width: 800px;
+      margin-bottom: 0;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .skill {
+      background: var(--light-blue);
+      color: var(--navy);
+      padding: 7px 12px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      background: #fbfcff;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 23px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(16, 39, 71, 0.09);
+    }
+
+    .project-number {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .project h3 {
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.4;
+      margin: 10px 0;
+    }
+
+    .project p {
+      margin-top: 0;
+    }
+
+    .project .skills {
+      margin-top: auto;
+      padding-top: 10px;
+    }
+
+    .project .skill {
+      font-size: 12px;
+    }
+
+    .experience-item,
+    .education-item {
+      border-left: 3px solid #c6d8f5;
+      padding: 2px 0 2px 18px;
+      margin-top: 18px;
+    }
+
+    .experience-item h3,
+    .education-item h3 {
+      color: var(--navy);
+      margin: 0 0 5px;
+    }
+
+    .experience-item p,
+    .education-item p {
+      margin: 4px 0;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .resume-panel {
+      background: var(--light-blue);
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .resume-panel h3 {
+      color: var(--navy);
+      margin: 0 0 4px;
+    }
+
+    .resume-panel p {
+      margin: 0;
+    }
+
+    .button-blue {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    .button-blue:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      padding: 10px 15px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-links a:hover {
+      background: var(--light-blue);
+    }
+
+    footer {
+      background: var(--navy);
+      color: #e4ebf7;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 4px 0;
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 45px 18px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 22px;
+      }
+
+      .section-heading {
+        font-size: 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <img src="1789956825089.jpg" alt="Profile photo">
-  <h1>Sriya Maroju</h1>
-  <p>MS in Business Analytics | Brandeis International Business School</p>
-  <p>Aspiring Business Analyst | Data-Driven Problem Solver</p>
-<div class="hero-buttons">
-  <a href="Sriya_resume.pdf" target="_blank">View My Resume</a>
-  <a href="https://www.linkedin.com/in/sriya-m-628095255/" target="_blank">LinkedIn Profile</a>
-  <a href="#projects">View Projects</a>
-</div>
-</header>
-
-<main>
-
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am pursuing my MS in Business Analytics at Brandeis
-      International Business School. I have a background in business
-      administration and professional experience at Cognizant.
-      I am interested in using data to understand business problems
-      and support better business decisions.
-    </p>
-  </section>
-
-  <section>
-    <h2>Technical Skills</h2>
-    <p>Python | R | SQL | Excel | Tableau | Data Analysis</p>
-    <p>Tools: Git, GitHub, Jupyter Notebook and RStudio.</p>
-  </section>
-
-  <section>
-   <h2 id="projects">Featured Projects</h2>
-
-    <div class="project">
-      <h3>Predicting Medical Insurance Charges</h3>
-      <p>
-        Used multiple regression analysis to explore factors
-        associated with medical insurance charges and understand
-        how data can support prediction and decision-making.
-      </p>
+  <nav class="navbar">
+    <a class="brand" href="#home">Sriya Maroju</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </div>
+  </nav>
 
-    <div class="project">
-      <h3>H-1B Policy and Mobility Patterns</h3>
-      <p>
-        Explored whether the September 2025 H-1B policy change
-        affected mobility patterns in Boston-Cambridge technology
-        and university areas using SafeGraph mobility data.
-      </p>
+  <header class="hero" id="home">
+    <img src="1789956825089.jpg" alt="Sriya Maroju profile photo">
+    <p class="eyebrow">Business Analytics · Data · Strategy</p>
+    <h1>Sriya Maroju</h1>
+    <p class="hero-description">
+      MS in Business Analytics student at Brandeis International Business
+      School, interested in using data to understand business challenges
+      and support better decisions.
+    </p>
+    <div class="hero-buttons">
+      <a class="button" href="Sriya_resume.pdf" target="_blank" rel="noopener noreferrer">View My Resume</a>
+      <a class="button button-outline" href="https://www.linkedin.com/in/sriya-m-628095255/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+      <a class="button button-outline" href="#projects">Explore Projects ↓</a>
     </div>
-  </section>
+  </header>
 
-  <section>
-    <h2>Professional Experience</h2>
-    <h3>Cognizant — Process Executive</h3>
-    <p>
-      Worked on dataset curation tasks using the EWOQ tool
-      for a Google client.
-    </p>
-  </section>
+  <main>
 
-  <section>
-  <h2>Resume</h2>
-  <p><a href="Sriya_resume.pdf" target="_blank">View My Resume (PDF)</a></p>
-</section>
-  <section>
-    <h2>Education</h2>
-    <h3>Brandeis International Business School</h3>
-    <p>Master of Science in Business Analytics</p>
+    <section id="about">
+      <h2 class="section-heading">About Me</h2>
+      <p class="about-text">
+        I am pursuing my MS in Business Analytics at Brandeis International
+        Business School. I have a background in business administration
+        and professional experience at Cognizant. I am interested in
+        business analysis, strategy, and using data to understand business
+        problems and support informed decisions.
+      </p>
+    </section>
 
-    <h3>Koneru Lakshmaiah University</h3>
-    <p>Bachelor of Business Administration</p>
-  </section>
+    <section id="skills">
+      <h2 class="section-heading">Technical Skills</h2>
+      <p class="section-intro">
+        Tools and technologies I have worked with through coursework and projects.
+      </p>
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">R</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Excel</span>
+        <span class="skill">Tableau</span>
+        <span class="skill">Data Analysis</span>
+        <span class="skill">Git</span>
+        <span class="skill">GitHub</span>
+        <span class="skill">Jupyter Notebook</span>
+        <span class="skill">RStudio</span>
+      </div>
+    </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>
-      LinkedIn:
-      <a href="https://www.linkedin.com/in/sriya-m-628095255/"
-         target="_blank">
-        View my LinkedIn profile
-      </a>
-    </p>
+    <section id="projects">
+      <h2 class="section-heading">Featured Projects</h2>
+      <p class="section-intro">
+        Selected projects exploring how data analysis can help answer business questions.
+      </p>
 
-    <p>
-      GitHub:
-      <a href="https://github.com/Sriyam3" target="_blank">
-        View my GitHub profile
-      </a>
-    </p>
-  </section>
+      <div class="project-grid">
+        <article class="project">
+          <span class="project-number">Project 01 · Regression</span>
+          <h3>Predicting Medical Insurance Charges</h3>
+          <p>
+            Used multiple regression analysis to explore factors associated
+            with medical insurance charges and understand how data can
+            support prediction and decision-making.
+          </p>
+          <div class="skills">
+            <span class="skill">Regression Analysis</span>
+            <span class="skill">Data Analysis</span>
+          </div>
+        </article>
 
-</main>
+        <article class="project">
+          <span class="project-number">Project 02 · Mobility Analysis</span>
+          <h3>H-1B Policy and Mobility Patterns</h3>
+          <p>
+            Explored whether the September 2025 H-1B policy change affected
+            mobility patterns in Boston-Cambridge technology and university
+            areas using SafeGraph mobility data.
+          </p>
+          <div class="skills">
+            <span class="skill">SafeGraph Data</span>
+            <span class="skill">Mobility Analysis</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<footer>
-  <p>Technical Portfolio | Sriya Maroju</p>
-</footer>
+    <section id="experience">
+      <h2 class="section-heading">Professional Experience</h2>
+      <div class="experience-item">
+        <h3>Cognizant — Process Executive</h3>
+        <p class="muted">Data-related operations · Google client</p>
+        <p>
+          Worked on dataset curation tasks using the EWOQ tool for a
+          Google client.
+        </p>
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2 class="section-heading">Resume</h2>
+      <div class="resume-panel">
+        <div>
+          <h3>Want to learn more about my background?</h3>
+          <p>View my resume for my education, skills, and experience.</p>
+        </div>
+        <a class="button button-blue" href="Sriya_resume.pdf" target="_blank" rel="noopener noreferrer">Open Resume ↗</a>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2 class="section-heading">Education</h2>
+      <div class="education-item">
+        <h3>Brandeis International Business School</h3>
+        <p>Master of Science in Business Analytics</p>
+      </div>
+      <div class="education-item">
+        <h3>Koneru Lakshmaiah University</h3>
+        <p>Bachelor of Business Administration</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-heading">Let's Connect</h2>
+      <p>
+        I’m interested in business analytics, data-driven problem-solving,
+        and opportunities to learn and grow professionally.
+      </p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/sriya-m-628095255/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="https://github.com/Sriyam3" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="Sriya_resume.pdf" target="_blank" rel="noopener noreferrer">Resume PDF ↗</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>Sriya Maroju</strong> · Business Analytics Portfolio</p>
+    <p>Built to showcase my learning, projects, and professional journey.</p>
+  </footer>
 
 </body>
 </html>
